@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default function turnoverCard (props) {
+export default function TurnoverCard (props) {
     return (
         <div className="turnoverCard">
             <button type ="button">delete</button>
@@ -10,3 +10,4 @@ export default function turnoverCard (props) {
         </div>
     )
 }
+
