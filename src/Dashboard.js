@@ -1,5 +1,6 @@
 import React from 'react';
 import { getUser, removeUserSession } from './Utils/Common';
+import TurnoverList from './turnoverList/turnoverList'
  
 function Dashboard(props) {
   const user = getUser();
@@ -13,8 +14,12 @@ function Dashboard(props) {
   return (
     <div>
       Welcome {user.name}!<br /><br />
+      <TurnoverList />
       <input type="button" onClick={handleLogout} value="Logout" />
+
     </div>
+    
+
   );
 }
  

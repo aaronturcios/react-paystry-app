@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 
-class RegisterForm extends Component {
+class Register extends Component {
   render() {
     return <div>
       <h4>Register Form</h4>
@@ -16,4 +16,4 @@ class RegisterForm extends Component {
     </div>
   }
 }
-export default RegisterForm;
+export default Register;

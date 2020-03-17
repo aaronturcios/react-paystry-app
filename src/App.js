@@ -3,9 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 import axios from 'axios';
  
-import Login from './Login';
-import Dashboard from './Dashboard';
 import Home from './Home';
+import Properties from './Properties';
+import Login from './Login';
+import Register from './Register';
+import Dashboard from './Dashboard';
  
 import PrivateRoute from './Utils/PrivateRoute';
 import PublicRoute from './Utils/PublicRoute';
@@ -39,14 +41,19 @@ function App() {
         <div>
           <div className="header">
             <NavLink exact activeClassName="active" to="/">Home</NavLink>
-            <NavLink activeClassName="active" to="/login">Login</NavLink>
+            <NavLink activeClassName="active" to="/properties">Properties</NavLink>
             <NavLink activeClassName="active" to="/dashboard">Dashboard</NavLink>
+            <NavLink activeClassName="active" to="/login">Login</NavLink>
+            <NavLink activeClassName="active" to="/register">Register</NavLink>
           </div>
+
           <div className="content">
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route path="/properties" component={Properties} />
               <PublicRoute path="/login" component={Login} />
               <PrivateRoute path="/dashboard" component={Dashboard} />
+              <PublicRoute path="/register" component={Register} />
             </Switch>
           </div>
         </div>
